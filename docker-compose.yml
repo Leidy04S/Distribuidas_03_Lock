@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  python-app:
+    image: python:3.11-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python 03_con_lock.py
